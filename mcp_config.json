@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "tokdown": {
-      "command": "tokdown",
+      "command": "tokdown.bat",
       "args": ["mcp"],
       "description": "TokDown: Real-time LLM token reduction engine (Tabular & TOON)"
     }

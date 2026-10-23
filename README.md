@@ -154,6 +154,37 @@ tokdown --count prompt.txt
 
 ---
 
+## 🤖 AI Agent & MCP Integration (Model Context Protocol)
+
+TokDown natively supports the **Model Context Protocol (MCP)**, allowing autonomous AI agents (Google Antigravity, Claude Desktop, Cursor) to dynamically reduce context bloat on-the-fly.
+
+### Launch MCP Server
+
+```bash
+tokdown mcp
+```
+
+### Configuration (`mcp_config.json`)
+
+Add TokDown to your agent configuration:
+
+```json
+{
+  "mcpServers": {
+    "tokdown": {
+      "command": "tokdown",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+### Discovered Tools:
+* `tokdown_compress`: Compresses structured JSON/YAML before prompt injection (saves 50-70% tokens).
+* `tokdown_count_tokens`: Estimates token usage and $ cost across GPT-4o and Claude 3.5 Sonnet.
+
+---
+
 ## 💻 Ruby Library Usage
 
 ### 1. Automatic Schema Optimization

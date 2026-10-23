@@ -126,10 +126,11 @@ module TokDown
 
     def parse_options!
       parser = OptionParser.new do |opts|
-        opts.banner = Color.paint("Usage: tokdown [options] [file]  OR  tokdown ui", Color::BOLD)
+        opts.banner = Color.paint("Usage: tokdown [options] [file]  OR  tokdown [ui|mcp]", Color::BOLD)
         opts.separator ""
         opts.separator Color.paint("Commands:", Color::CYAN)
         opts.separator "    ui, web                          Launch the interactive browser playground"
+        opts.separator "    mcp                              Start Model Context Protocol (MCP) server for AI agents"
         opts.separator ""
         opts.separator Color.paint("Options:", Color::CYAN)
 
